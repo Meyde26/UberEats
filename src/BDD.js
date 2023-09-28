@@ -54,4 +54,4 @@ const info = [
       drive_time: '30 - 40mn'
     },
   ]
-  module.exports = info;
+  export default info;
