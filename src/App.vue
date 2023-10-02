@@ -24,6 +24,6 @@
 
 #app{
   font-family: 'roboto',sans-serif;
-  padding: 20px;
+  padding: 0px 20px;
 }
 </style>

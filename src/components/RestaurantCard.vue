@@ -1,6 +1,6 @@
 <template>
   <div class="restaurant--card">
-    <div class="restaurant--image">
+    <div :style="changeBackground" class="restaurant--image">
 
     </div>
     <div class="restaurant--info">
@@ -18,12 +18,30 @@
 </template>
 
 <script>
+
+// Les imports
+import { computed } from 'vue';
+
+
 export default {
-  name: 'RestaurantRow',
+  name: 'RestaurantCard',
   props: {
     info_restaurant: Object
+  },
+
+  setup(props) {
+    const changeBackground = computed(() => {
+      return{
+        backgroundImage: `url(${props.info_restaurant.image})`
+      }
+
+    })
+        return{
+           changeBackground
+        }
+    }
+
   }
-}
 </script>
 
 <style lang="scss">
@@ -35,10 +53,7 @@ export default {
           background-image: url(https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC8zNzg4MDJiMC1jNTI4LTQ4MjktYjBiNS0wY2M2NDBkZjYzY2QuanBlZw==);
           height: 70%;
           background-size: cover;
-          background-position: center;
-
-          
-          
+          background-position: center;    
       }
 
       .restaurant--info{
