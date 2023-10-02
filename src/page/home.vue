@@ -86,7 +86,9 @@ export default {
   .bannier{
     height: 200px;
     width: 100%;
-    
+    background-image: url(https://cdn.discordapp.com/attachments/1155762400469975111/1158319013542232084/WelcomeToUberEats.webp?ex=651bd025&is=651a7ea5&hm=d38f12abd54daaf1d335fc12c50677d94e922d6a3e0c8481ca51e42060a0cd7b&);
+    background-size:cover;
+    background-position: center center;
   }
 }
 
